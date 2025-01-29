@@ -1,4 +1,40 @@
-# Backend (Node.js/Express or similar)
-backend/node_modules/
-backend/.env
-backend/.env.*.local
+# Node.js dependencies
+/node_modules/
+
+# Environment files
+.env
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Dependency directories
+jspm_packages/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor configurations
+.vscode/
+.idea/
+
+# NPM cache
+.npm/
+
+# Build directories
+build/
+dist/
+
+# Coverage
+coverage/
+
+# Debugger files
+*.env.local
+
+# Package-lock file (if not using versioning for it)
+package-lock.json
+
+# Yarn.lock file (if using Yarn, add this line)
+yarn.lock
