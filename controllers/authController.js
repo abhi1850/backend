@@ -4,9 +4,10 @@ import jwt from "jsonwebtoken";
 
 export const register = async (req, res) => {
     try {
-        const { username, password, isAdminUser } = req.body;
+        console.log("Inside register");
+        const { username, password, email, phoneNumber, isAdminUser } = req.body;
 
-        if (!username || !password) {
+        if (!username || !password || !email || !phoneNumber) {
             return res
                 .status(400)
                 .json({ Message: "Username and Password are required" });
@@ -19,6 +20,8 @@ export const register = async (req, res) => {
         const newUser = new User({
             username,
             password: hashedPassword,
+            email,
+            phoneNumber,
             isAdminUser: isAdminUser || false,
         });
 
